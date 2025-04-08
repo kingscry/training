@@ -145,9 +145,25 @@ public class CircularSinglyLinkedList {
 			}
 			current.next=head;
 			temp=current;
+			count--;
+			return;
 			
 		}
+		Node current=head;
+		int i=1;
 		
+		do {
+			if(i==position-1) {
+				Node node=current.next;
+				current.next=node.next;
+				node.next=null;
+				count--;
+				return;
+			}
+			current=current.next;
+			i++;
+		}
+		while(current!=head);	
 	}
 }
-
+			
