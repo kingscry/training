@@ -126,15 +126,15 @@ public class CircularSinglyLinkedList {
 			System.out.println("no data to delete");
 		}
 		Node lastnode=head;
-		do {
-			lastnode=lastnode.next;
-		}while(lastnode!=head);
+		//do {
+		//	lastnode=lastnode.next;
+		//}while(lastnode!=head);
 		
 		if(position==1) {
 			Node current=head;
 			head=head.next;
 			current.next=null;
-			lastnode.next=head;
+			temp.next=head;
 			count--;
 			return;	
 		}
